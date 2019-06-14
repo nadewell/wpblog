@@ -808,3 +808,12 @@ section.latest-blog .row:first-child{
 .comments-area .comment-list .children .comment:last-child {
     margin-bottom: 0;
 }
+/***** Search Form *****/
+.searchform .form-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.searchform .btn {
+    margin-left: 5px;
+}
