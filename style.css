@@ -258,6 +258,11 @@ section.newsletter-optin {
     text-transform: uppercase;
     text-align: center;
 }
+/******* Footer *******/
+.site-footer{
+    padding: 50px 0px;
+    background: #d9ff00
+}
 .footer-credits {
     width: 100%;
     padding: 10px 0px;
