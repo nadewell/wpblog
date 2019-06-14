@@ -1,4 +1,4 @@
-<form role="search" method="get" id="searchform" class="searchform" action="https://www.nadewell.tk/">
+<form role="search" method="get" id="searchform" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
     <div class="form-group">
         <label class="screen-reader-text" for="s">Search for:</label>
         <input class="form-control" type="text" value="" name="s" id="s">
