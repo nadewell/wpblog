@@ -258,21 +258,6 @@ section.newsletter-optin {
     text-transform: uppercase;
     text-align: center;
 }
-/******* Footer *******/
-.site-footer{
-    padding: 50px 0px;
-    background: #d9ff00
-}
-.footer-credits {
-    width: 100%;
-    padding: 10px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.footer-credits > p {
-    margin-bottom: 0;
-}
 /****** service section ******/
 section.services {
     padding: 50px 0px 50px 0px;
@@ -614,7 +599,18 @@ section.latest-blog .row:first-child{
 }
 /******* Footer *******/
 .site-footer {
+    padding: 50px 0px;
     background-color: #f8f9fa;
+}
+.footer-credits {
+    width: 100%;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-credits > p {
+    margin-bottom: 0;
 }
 /****** Widgets ******/
 .widget {
