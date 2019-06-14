@@ -619,10 +619,12 @@ section.latest-blog .row:first-child{
 /****** Widgets ******/
 .widget {
     padding: 20px;
+    margin-bottom: 30px;
+}
+.sidebar-area .widget {
     border: 1px solid #dddddd;
     border-bottom: 4px solid #10003d;
     border-radius: 5px;
-    margin-bottom: 30px;
     box-shadow: 0px 0px 5px 0px #eeeeee;
 }
 .widget-title {
