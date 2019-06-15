@@ -102,6 +102,10 @@ img{
     text-transform: uppercase;
     background: #10003d;
 }
+.navbar-brand > img {
+    max-width: 250px;
+    max-height: 50px;
+}
 /******* HERO SLIDER *******/
 .hero-slider{
     position: relative;
