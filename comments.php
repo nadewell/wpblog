@@ -20,7 +20,7 @@ if ( post_password_required() ) {
 			$comments_number = get_comments_number();
 			if ( '1' === $comments_number ) {
 				/* translators: %s: post title */
-				printf( _x( 'One Reply to &ldquo;%s&rdquo;', 'comments title', 'stockschool' ), get_the_title() );
+				printf( _x( 'One Reply to &ldquo;%s&rdquo;', 'comments title', 'wpblog' ), get_the_title() );
 			} else {
 				printf(
 					/* translators: 1: number of comments, 2: post title */
@@ -29,7 +29,7 @@ if ( post_password_required() ) {
 						'%1$s Replies to &ldquo;%2$s&rdquo;',
 						$comments_number,
 						'comments title',
-						'stockschool'
+						'wpblog'
 					),
 					number_format_i18n( $comments_number ),
 					get_the_title()
@@ -45,7 +45,7 @@ if ( post_password_required() ) {
 						'avatar_size' => 100,
 						'style'       => 'ul',
 						'short_ping'  => true,
-						'reply_text'  => '<i class="fa fa-reply" aria-hidden="true"></i>'. __( ' Reply', 'stockschool' ),
+						'reply_text'  => '<i class="fa fa-reply" aria-hidden="true"></i>'. __( ' Reply', 'wpblog' ),
 						'walker'	  => new Schema_Walker_Comment(),
 						'format'	  => 'schema'
 					)
@@ -56,8 +56,8 @@ if ( post_password_required() ) {
 		<?php
 		the_comments_pagination(
 			array(
-				'prev_text' => '<i class="fa fa-long-arrow-left" aria-hidden="true"></i>' . '<span class="screen-reader-text">' . __( 'Previous', 'stockschool' ) . '</span>',
-				'next_text' => '<span class="screen-reader-text">' . __( 'Next', 'stockschool' ) . '</span>' . '<i class="fa fa-long-arrow-right" aria-hidden="true"></i>',
+				'prev_text' => '<i class="fa fa-long-arrow-left" aria-hidden="true"></i>' . '<span class="screen-reader-text">' . __( 'Previous', 'wpblog' ) . '</span>',
+				'next_text' => '<span class="screen-reader-text">' . __( 'Next', 'wpblog' ) . '</span>' . '<i class="fa fa-long-arrow-right" aria-hidden="true"></i>',
 			)
 		);
 
@@ -67,7 +67,7 @@ if ( post_password_required() ) {
 	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 		?>
 
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'stockschool' ); ?></p>
+		<p class="no-comments"><?php _e( 'Comments are closed.', 'wpblog' ); ?></p>
 		<?php
 	endif;
 
