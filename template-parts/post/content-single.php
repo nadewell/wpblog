@@ -12,8 +12,9 @@
     <div class="post-content">
         <div class="post-meta">
             <span class="post-date" itemprop="datePublished"><?php the_date('d M,Y', 'Posted on ', '', true); ?></span>
-            <span class="post-category" itemprop="genre"><?php the_category(','); ?></span>
+            <span class="post-category" itemprop="genre">Category: <?php the_category(','); ?></span>
         </div>
         <div class="post-desc" itemprop="text"><?php the_content(); ?></div>
+        <div class="post-tags"><?php the_tags(); ?></div>
     </div>
 </article>

@@ -7,8 +7,6 @@
 * Version: 1.0.0
 */
 
-
-
 /******* GLOBAL CSS *******/
 .btn{
     padding: 5px 20px;
@@ -37,6 +35,11 @@
 .navbar-nav  li.nav-item:last-child {
     margin-right: 0px;
     margin-left: 10px;
+}
+ul.simple-list{
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px
 }
 ul.fancy-list{
     list-style: none;
@@ -244,6 +247,11 @@ section.newsletter-optin {
 .optin-modal{
     padding: 0 !important;
 }
+.optin-modal .modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .optin-modal .modal-dialog {
     max-width: 100%;
     height: 100%;
@@ -261,6 +269,16 @@ section.newsletter-optin {
     color: #10003d;
     text-transform: uppercase;
     text-align: center;
+}
+.optin-modal .footer-credits {
+    width: 100%;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.optin-modal .footer-credits > p {
+    margin-bottom: 0;
 }
 /****** service section ******/
 section.services {
@@ -348,6 +366,10 @@ section.advantages h2.section-title::after {
 }
 section.advantages .advantages-desc{
     text-align: center;
+    margin-bottom: 50px;
+}
+section.advantages .advantages-desc > p:last-child{
+    margin-bottom: 0;
 }
 /******* Testimonials *******/
 section.testimonials{
@@ -471,6 +493,7 @@ section.latest-blog .row:first-child{
 /****** Blog Post *****/
 .blog .post,
 .archive .post,
+.archive .testimonial,
 .search .post {
     margin-bottom: 30px;
     border: 1px solid #dddddd;
@@ -551,7 +574,8 @@ section.latest-blog .row:first-child{
     color: #333333;
 }
 /****** Single Post *****/
-.single .post{
+.single .post,
+.single .testimonial {
     margin-bottom: 50px;
     border: 1px solid #dddddd;
     border-bottom: 4px solid #10003d;
@@ -584,13 +608,12 @@ section.latest-blog .row:first-child{
     align-items: center;
     margin-bottom: 15px;
 }
-.single .post-meta > span {
+.single .post-meta .post-date,
+.single .post-meta .post-category,
+.single .post-meta .post-category a {
     color: #999999;
     font-size: 14px;
     font-weight: 300;
-}
-.single .post-meta .post-category a {
-    color: #999999;
 }
 .single .post-meta .post-category a:hover,
 .single .post-meta .post-category a:focus {
@@ -600,6 +623,16 @@ section.latest-blog .row:first-child{
     font-size: 16px;
     font-weight: 400;
     color: #333333;
+}
+.single .post-tags,
+.single .post-tags > a {
+    font-size: 16px;
+    font-weight: 300;
+    color: #999999;
+    text-decoration: none;
+}
+.single .post-tags > a:hover{
+    color: #10003d;
 }
 /******* Footer *******/
 .site-footer {
@@ -668,7 +701,7 @@ section.latest-blog .row:first-child{
 }
 .post-extras .author-box {
     border-bottom: 1px solid #dddddd;
-
+    margin-bottom: 15px;
 }
 .post-extras .author-box .author-gravtar{
     margin-bottom: 10px;
@@ -687,9 +720,6 @@ section.latest-blog .row:first-child{
     font-weight: 400;
     text-align: center;
     text-transform: uppercase;
-}
-.post-navigation {
-    margin-top: 15px;
 }
 .post-navigation .nav-links {
     display: table;
@@ -743,25 +773,30 @@ section.latest-blog .row:first-child{
 .comments-area .comment-meta {
     margin-bottom: 10px;
 }
-.comments-area .comment-meta > a {
-    color: #999999;
-    font-size: 16px;
-    font-weight: 300;
-    text-decoration: none;
-}
-.comments-area .comment-meta > a:hover,
-.comments-area .comment-meta > a:focus{
-    color: #10003d;
-}
+.comments-area .comment-metadata a,
 .comments-area .comment-list .reply .comment-reply-link {
     color: #999999;
     font-size: 16px;
     font-weight: 300;
     text-decoration: none;
 }
+.comments-area .comment-metadata a:hover,
+.comments-area .comment-metadata a:focus,
 .comments-area .comment-list .reply .comment-reply-link:hover,
 .comments-area .comment-list .reply .comment-reply-link:focus{
     color: #10003d;
+}
+.comments-area .comment-metadata .edit-link::before {
+    content: "(";
+    display: inline-block;
+    margin-right: 5px;
+    color: #999999;
+}
+.comments-area .comment-metadata .edit-link::after {
+    content: ")";
+    display: inline-block;
+    margin-left: 5px;
+    color: #999999;
 }
 .comment-respond {
     padding: 20px 15px;
@@ -820,4 +855,247 @@ section.latest-blog .row:first-child{
 }
 .searchform .btn {
     margin-left: 5px;
+}
+/******* Rainmaker Form *******/
+.rainmaker_form label{
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    color: #333333;
+}
+.rainmaker_form input[type="text"],
+.rainmaker_form input[type="email"] {
+    width: 100%;
+    min-height: 30px;
+    padding: 5px 10px;
+    border: 1px solid #999999;
+    border-radius: 0px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1;
+    color: #999999;
+}
+.rainmaker_form input[type="text"]::placeholder,
+.rainmaker_form input[type="email"]::placeholder,
+.rainmaker_form input[type="text"]::-moz-placeholder,
+.rainmaker_form input[type="email"]::-moz-placeholder,
+.rainmaker_form input[type="text"]::-webkit-input-placeholder,
+.rainmaker_form input[type="email"]::-webkit-input-placeholder  {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1;
+    color: #999999;
+}
+.rainmaker_form input[name="text"]:hover,
+.rainmaker_form input[name="email"]:hover,
+.rainmaker_form input[name="text"]:focus,
+.rainmaker_form input[name="email"]:focus{
+    border: 1px solid #10003d;
+    color: #333333;
+}
+.rainmaker_form input[type="submit"]{
+    display: inline-block;
+    padding: 5px 20px;
+    border-radius: 2px;
+    
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: #10003d;
+    border: 1px solid #10003d;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.rainmaker_form input[type="submit"]:hover,
+.rainmaker_form input[type="submit"]:focus{
+    background: #007bff;
+    border-color: #007bff;
+}
+/******** Pagination ********/
+.nav-pagination {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-pagination > .page-numbers {
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #999999;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1;
+    text-decoration: none;
+}
+.nav-pagination > .page-numbers.current {
+    color: #10003d;
+    font-weight: 400;
+}
+.nav-pagination > .page-numbers.prev,
+.nav-pagination > .page-numbers.next {
+    width: 30px;
+    height: 30px;
+    background: #10003d;
+    border: 1px solid #10003d;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1;
+    color: #ffffff;
+}
+/******** Service Page ********/
+/******** Service section ********/
+section.services{
+    padding: 50px 0px 50px 0px;
+}
+section.services h2.section-title {
+    color: #10003d;
+}
+section.services h2.section-title::after {
+    background: #10003d;
+}
+section.services .service-desc{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+section.services .service-desc > p:last-child{
+    margin-bottom: 0;
+}
+/******** Pricing Section ********/
+section.pricing{
+    padding: 50px 0px 50px 0px;
+    background: #eeeeee;
+}
+section.pricing h2.section-title {
+    color: #10003d;
+}
+section.pricing h2.section-title::after {
+    background: #10003d;
+}
+section.pricing .pricing-desc{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+section.pricing .pricing-desc > p:last-child{
+    margin-bottom: 0;
+}
+section.pricing .plan {
+    padding: 20px 25px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px #bbbbbb;
+}
+section.pricing .plan .title {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1;
+    color: #10003d;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px;
+    margin-bottom: 0px;
+}
+section.pricing .plan .duration {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    color: #999999;
+    text-align: center;
+    margin-bottom: 20px;
+}
+section.pricing .plan .price {
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+/******** About Page ********/
+section.about{
+    padding: 50px 0px 50px 0px;
+}
+section.about h2.section-title {
+    color: #10003d;
+}
+section.about h2.section-title::after {
+    background: #10003d;
+}
+section.about .about-desc{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+section.about .about-desc > p:last-child{
+    margin-bottom: 0;
+}
+/******** Contact Page ********/
+section.contact{
+    padding: 50px 0px 50px 0px;
+}
+section.contact h2.section-title {
+    color: #10003d;
+}
+section.contact h2.section-title::after {
+    background: #10003d;
+}
+section.contact .contact-desc{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+section.contact .contact-desc > p:last-child{
+    margin-bottom: 0;
+}
+section.contact ul.simple-list > li{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+section.contact ul.simple-list > li {
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+section.contact ul.simple-list > li > i {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #10003d;
+}
+/******** 404 Page ********/
+section.error404 {
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px 50px 0px;
+}
+section.error404 h2.section-title {
+    color: #10003d;
+    margin-bottom: 10px;
+}
+section.error404 h2.section-title::after {
+    background: #10003d;
+}
+section.error404 .error404-desc{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
 }
