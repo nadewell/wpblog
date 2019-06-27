@@ -240,7 +240,7 @@ Redux::setSection( $opt_name, array(
     'fields'           => array(
         array(
             'id'       => 'header-widget',
-            'type'     => 'textarea',
+            'type'     => 'editor',
             'title'    => __( 'Header Widget', 'redux-framework-demo' ),
             'subtitle' => __( 'header widget', 'redux-framework-demo' ),
             'desc'     => __( 'Widget which is place besides navigation menu', 'redux-framework-demo' ),
@@ -261,6 +261,39 @@ Redux::setSection( $opt_name, array(
             'title'    => __( 'Newsletter Shortcode', 'redux-framework-demo' ),
             'subtitle' => __( 'shortcode', 'redux-framework-demo' ),
             'desc'     => __( 'shortcode to newsletter form to to add in popup', 'redux-framework-demo' ),
+            'default'  => '',
+        ),
+    )
+) );
+Redux::setSection( $opt_name, array(
+    'title'            => __( '404 Page', 'redux-framework-demo' ),
+    'id'               => '404page',
+    'desc'             => __( '404 Page Configuration!', 'redux-framework-demo' ),
+    'customizer_width' => '400px',
+    'icon'             => 'el el-globe',
+    'fields'           => array(
+        array(
+            'id'       => '404-heading',
+            'type'     => 'text',
+            'title'    => __( '404 page Title', 'redux-framework-demo' ),
+            'subtitle' => __( 'Heading', 'redux-framework-demo' ),
+            'desc'     => __( 'Title of 404 error page. ', 'redux-framework-demo' ),
+            'default'  => 'Error 404',
+        ),
+        array(
+            'id'       => '404-description',
+            'type'     => 'textarea',
+            'title'    => __( '404 page description', 'redux-framework-demo' ),
+            'subtitle' => __( 'Description', 'redux-framework-demo' ),
+            'desc'     => __( 'Description of 404 error page. ', 'redux-framework-demo' ),
+            'default'  => 'I think you\'re lost and at a wrong place.',
+        ),
+        array(
+            'id'       => '404-background',
+            'type'     => 'media',
+            'title'    => __( 'Background Image', 'redux-framework-demo' ),
+            'subtitle' => __( 'Image', 'redux-framework-demo' ),
+            'desc'     => __( '404 Page Background Image', 'redux-framework-demo' ),
             'default'  => '',
         ),
     )
