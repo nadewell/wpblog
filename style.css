@@ -24,18 +24,6 @@
 .navbar {
     box-shadow: 0px 1px 5px 0px #999999;
 }
-.navbar-nav  li.nav-item {
-    margin-right: 10px;
-    margin-left: 10px;
-}
-.navbar-nav  li.nav-item:first-child {
-    margin-right: 10px;
-    margin-left: 0px;
-}
-.navbar-nav  li.nav-item:last-child {
-    margin-right: 0px;
-    margin-left: 10px;
-}
 ul.simple-list{
     list-style: none;
     padding: 0;
@@ -1098,4 +1086,20 @@ section.error404 .error404-desc{
     width: 100%;
     text-align: center;
     margin-bottom: 50px;
+}
+
+/* Media Query For Desktops and Laptops */
+@media(min-width: 992px){
+    .navbar-nav  li.nav-item {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .navbar-nav  li.nav-item:first-child {
+        margin-right: 10px;
+        margin-left: 0px;
+    }
+    .navbar-nav  li.nav-item:last-child {
+        margin-right: 0px;
+        margin-left: 10px;
+    }
 }
