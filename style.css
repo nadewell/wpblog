@@ -7,6 +7,13 @@
 * Version: 1.0.0
 */
 
+/******* Editor CSS *******/
+ul, ol {
+    padding-left: 1rem;
+}
+.wp-block-embed iframe {
+    max-width: 100%;
+}
 /******* GLOBAL CSS *******/
 .btn{
     padding: 5px 20px;
@@ -84,18 +91,24 @@ img{
     min-height: 400px;
 }
 .hero-banner h1{
+	width: 100%;
     margin: 0;
-    padding: 10px;
+    padding: 10px 15px;
     color: #ffffff;
     font-size: 42px;
     line-height: 1;
     font-weight: 500;
     text-transform: uppercase;
     background: #10003d;
+    text-align: center;
 }
 .navbar-brand > img {
     max-width: 250px;
     max-height: 50px;
+}
+.navbar .navbar-nav .nav-link {
+    font-size: 16px;
+    font-weight: 500;
 }
 /******* HERO SLIDER *******/
 .hero-slider{
@@ -215,6 +228,10 @@ ul.slick-dots li.slick-active > button:before{
   top: 5px;
   width: auto;
   z-index: 100000; /* Above WP toolbar. */
+}
+.navbar .navbar-collapse {
+    border-top: 2px solid rgba(0,0,0,.1);
+    margin-top: 5px;
 }
 /******* Newsletter Optin ********/
 section.newsletter-optin {
@@ -735,6 +752,7 @@ section.latest-blog .row:first-child{
 /******* Comment Form ******/
 .comments-area {
     padding: 20px 15px;
+	margin-bottom: 30px;
     border: 1px solid #dddddd;
     border-bottom: 4px solid #10003d;
     border-radius: 5px;
@@ -1102,4 +1120,14 @@ section.error404 .error404-desc{
         margin-right: 0px;
         margin-left: 10px;
     }
+	.navbar .navbar-collapse {
+		border-top: none;
+		margin-top: 0;
+	}
+	.hero-banner h1{
+		width: 70%;
+	}
+	.comments-area {
+		margin-bottom: 0;
+	}
 }
